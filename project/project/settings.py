@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
+    # Third party apps
+    'bootstrap3',
+    
     # My apps
     'projects',
     'users',
@@ -124,3 +127,8 @@ USE_TZ = True
 # My settings
 LOGIN_URL = '/users/login'
 STATIC_URL = '/static/'
+
+# Settings for django-bootstrap3
+BOOTSTRAP3 = {
+	'include_jquery': True,
+}

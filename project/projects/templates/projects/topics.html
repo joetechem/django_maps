@@ -1,20 +1,24 @@
 {% extends "projects/base.html" %}
 
-{% block content %}
+{% block header %}
+  <h1>Topics</h1>
+{% endblock header %}
 
-  <p>Topics</p>
+{% block content %}
 
   <ul>
     {% for topic in topics %}
       <li>
+		  <h3>
 		  <a href="{% url 'projects:topic' topic.id %}">{{ topic }}</a>
-		  </li>
+		  </h3>
+		</li>
     {% empty %}
       <li>No topics have been added yet.</li>
     {% endfor %}
   </ul>
   
-  <a href="{% url 'projects:new_topic' %}">Add new topic</a>
+  <h3><a href="{% url 'projects:new_topic' %}">Add new topic</a></h3>
 
 
 {% endblock content %}

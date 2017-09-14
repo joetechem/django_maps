@@ -1,5 +1,18 @@
 {% extends "projects/base.html" %}
 
+{% block header %}
+  <div class='jumbotron'>
+      <h1>Save your streams.</h1>        
+  </div>
+{% endblock header %}
+
 {% block content %}
-	<p>Project helps you visualize SOS data.</p>
+  <h2>
+    <a href="{% url 'users:register' %}">Register an account</a> to make
+     your own data tracking for stream measurements, and list the streams and data you're saving.
+  </h2>
+  <h2>
+    Whenever you take measurements from a stream, make an entry 
+    summarizing what you've found.
+  </h2>
 {% endblock content %}
